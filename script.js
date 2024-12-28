@@ -39,32 +39,32 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(element => {
         observer.observe(element);
     });
-});
 
-// Detect hover on specific elements
-document.querySelectorAll('button, a, .hoverable').forEach((element) => {
-    element.addEventListener('mouseenter', () => {
-        customCursor.classList.add('hovering'); // Add light blue class
+    // Detect hover on specific elements
+    document.querySelectorAll('button, a, .hoverable').forEach((element) => {
+        element.addEventListener('mouseenter', () => {
+            cursor.classList.add('hovering'); // Add light blue class
+        });
+        element.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hovering'); // Remove light blue class
+        });
     });
-    element.addEventListener('mouseleave', () => {
-        customCursor.classList.remove('hovering'); // Remove light blue class
+
+    // Track cursor movement for background color change
+    document.addEventListener('mousemove', (event) => {
+        // Get the element under the cursor
+        const elementUnderCursor = document.elementFromPoint(event.clientX, event.clientY);
+        
+        // Check the background color of the element
+        const backgroundColor = window.getComputedStyle(elementUnderCursor).backgroundColor;
+
+        // If the background is black, change cursor to white, else revert to black
+        if (isBlack(backgroundColor)) {
+            cursor.style.backgroundColor = 'white';
+        } else {
+            cursor.style.backgroundColor = 'black';
+        }
     });
-});
-
-// Track cursor movement for background color change
-document.addEventListener('mousemove', (event) => {
-    // Get the element under the cursor
-    const elementUnderCursor = document.elementFromPoint(event.clientX, event.clientY);
-    
-    // Check the background color of the element
-    const backgroundColor = window.getComputedStyle(elementUnderCursor).backgroundColor;
-
-    // If the background is black, change cursor to white, else revert to black
-    if (isBlack(backgroundColor)) {
-        customCursor.style.backgroundColor = 'white';
-    } else {
-        customCursor.style.backgroundColor = 'black';
-    }
 });
 
 // Function to check if the background color is black or close to black
