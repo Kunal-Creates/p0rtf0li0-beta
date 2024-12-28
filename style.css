@@ -638,12 +638,13 @@ html, body {
     .navbar{
         display: flex; /* Align items horizontally */
         justify-content: right; 
+        margin-right: 20px;
     }
     .Location{
         margin-left: 50px;
     }
     .Head-Line{
-        margin-left: 50px;
+        margin-left: 30px;
         font-size: 18px;
     }
     #Box1 {
@@ -825,9 +826,10 @@ html, body {
     .navbar{
         display: flex; /* Align items horizontally */
         justify-content: right; 
+        margin-right: 60px;
     }
     .Location{
-        margin-left: 60px;
+        margin-left: 80px;
     }
     .Head-Line{
         margin-left: 60px;
@@ -981,11 +983,14 @@ html, body {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     /* Styles for tablets */
+    .navbar{
+        margin-right: 80px;
+    }
     .Location{
-        margin-left: 100px;
+        margin-left: 120px;
     }
     .Head-Line{
-        margin-left: 100px;
+        margin-left: 90px;
         font-size: 22px;
     }
     .project-grid{
@@ -1047,7 +1052,13 @@ html, body {
         width: 740px;
         height: 500px;
     }
-}
+    .Head-Line{
+        align-items: center;
+        margin: 110px;
+    }
+    .Location{
+        margin-left: 140px;
+    }
 
 .container {
     width: 95%;
@@ -1100,3 +1111,4 @@ html, body {
     pointer-events: auto; /* Re-enable interaction after animation */
 }
 
+}
