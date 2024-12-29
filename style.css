@@ -114,7 +114,7 @@ html, body {
 }
 .direction-text{
     font-family: Poly;
-    font-weight: lighter;
+    color: grey;
     font-size: 18px;
     text-align: center;
     padding-top: 20px;
@@ -1104,9 +1104,9 @@ html, body {
 
 /* Add different delays for elements */
 .delay-1 { transition-delay: 0.2s; } /* Reduced from 0.2s */
-.delay-2 { transition-delay: 0.3s; } /* Reduced from 0.4s */
-.delay-3 { transition-delay: 0.4s; } /* Reduced from 0.6s */
-.delay-4 { transition-delay: 0.5s; } /* Reduced from 0.8s */
+.delay-2 { transition-delay: 0.4s; } /* Reduced from 0.4s */
+.delay-3 { transition-delay: 0.6s; } /* Reduced from 0.6s */
+.delay-4 { transition-delay: 0.8s; } /* Reduced from 0.8s */
 
 /* Update fade-up animation to not conflict with hover */
 .fade-up {
