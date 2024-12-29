@@ -73,6 +73,7 @@ html, body {
 
 .Resume{
     background-color: rgb(255, 255, 213);
+    cursor: alias;
     font-family: Podkova;
     font-size: 14px;
     display: flex;
@@ -101,6 +102,7 @@ html, body {
     font-weight: bold;
     margin-left: 150px;
     color: rgb(0, 7, 107);
+    
 }
 
 .direction{
@@ -131,6 +133,7 @@ html, body {
 }
 
 .project-card {
+    cursor: alias;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,6 +279,7 @@ html, body {
 }
 
 .ex1 {
+    cursor: alias;
     height: 225px;
     width: 225px;
     background-color: antiquewhite;
@@ -1048,6 +1052,10 @@ html, body {
 }
 @media (min-width: 1025px) and (max-width: 1229px) {
     /* Styles for desktops */
+    .bio-text{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
     #Box2{
         width: 740px;
         height: 500px;
